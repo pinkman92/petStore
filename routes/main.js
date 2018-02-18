@@ -67,15 +67,9 @@ router.get("/dashboard", auth.loginRequired, (req, res) => {
           if(arr.length > 0){
             for(let i=0; i< docs.length; i++){
               for(let j=0; j<arr.length;j++){
-                console.log("arr[j] ", arr[j]);
-                console.log("docs[i],_id ", docs[i]._id);
-                console.log(typeof arr[j]);
-                console.log(typeof docs[i]._id);
-                console.log(arr[j].toString() == (docs[i]._id).toString());
                 if(arr[j].toString() == (docs[i]._id).toString()){
                   console.log("matchhhhhhhh");
                   docs[i].flag = 1;
-                 // console.log(res.locals.pets[i]);
                 }
               }
               console.log("After each iteration ", docs);
@@ -104,8 +98,6 @@ router.post("/dashboard", auth.loginRequired, (req, res) => {
   }
   for(let i =0 ; i< selection.length ; i++){
     console.log(JSON.parse(selection[i])._id);
-		//console.log(selection[i]["_id"])
-	//	console.log("Id is ", selection[i]._id);
   arr.push(JSON.parse(selection[i])._id);
   console.log("The arr is ", arr);
 }
@@ -142,29 +134,6 @@ pets.find({}, (err, docs) => {
     }
   })
 })
-  /*for(let i=0; i< res.locals.pets.length; i++){
-    for(let j=0; j<arr.length;j++){
-        if(arr[j] == res.locals.pets[i]._id){
-          console.log("matchhhhhhhh");
-          res.locals.pets[i].flag = true;
-          console.log(res.locals.pets[i]);
-        }
-        else{
-          res.locals.pets[i].flag = false;
-        }
-    }
-  } */
-  /*for(let i=0;i<arr.length;i++){
-    for(let j=0;j<res.locals.pets.length;j++){
-      if(arr[i] == res.locals.pets[j]._id){
-        console.log("matchhhhhhhh")
-        res.locals.pets[j].flag = 1;
-      }
-      else{
-        res.locals.pets[j].flag = 0;
-      }
-    }
-  }  */
   
 })
 
