@@ -1,0 +1,23 @@
+{
+  "name": "petstore",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.18.2",
+    "client-sessions": "^0.8.0",
+    "cookie-parser": "~1.4.3",
+    "csurf": "^1.9.0",
+    "debug": "~2.6.9",
+    "express": "~4.15.5",
+    "jade": "~1.11.0",
+    "method-override": "^2.3.10",
+    "mongoose": "^5.0.6",
+    "morgan": "~1.9.0",
+    "pug": "^2.0.0-rc.4",
+    "serve-favicon": "~2.4.5"
+  }
+}
