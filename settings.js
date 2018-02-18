@@ -20,15 +20,6 @@ module.exports = {
 
   // destroy sessions when the browser is closed.
   SESSION_EPHEMERAL_COOKIES: false,
-
-  // use stronger-than-normal security for signing our JWTs
   JWT_SIGNING_ALGORITHM: "HS512",
-
-  // the 256-byte JWT signing key that we'll use to sign all user tokens.  this
-  // should never be checked into version control, but should be the same among
-  // all servers.  you can generate this using the secure-random library:
-  //
-  // const secureRandom = require("secure-random");
-  // console.log(secureRandom(512, { type: "Buffer" }).toString("base64"));
   JWT_SIGNING_KEY: "Abhimanyu"
 };

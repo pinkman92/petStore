@@ -1,15 +1,15 @@
 
 block body
 
-form(action='/addPets' method='post')
+form(action='/dashboard' method='post')
 	each val in pets
 		if (val.flag === 1)
 			input(type='checkbox' name='vehicle' value=val checked='')
-			|  I have a #{val.name} #{val.flag} #{val}
+			|  #{val.name} - Rs #{val.cost}
 			br
 		else
 			input(type='checkbox' name='vehicle' value=val)
-			|  I have a #{val.name} #{val.flag} #{val}
+			|  #{val.name} - Rs #{val.cost}
 			br
 	input(type='submit' value='Submit')
 

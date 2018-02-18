@@ -16,7 +16,7 @@ let router = express.Router();
   }
   else{
   	// redirect to index for login or signup
-  	res.render("home");
+  	res.render("index");
   }
  /* pets.Pets.find({}, (err, docs) => {
         if(err){
@@ -34,41 +34,7 @@ let router = express.Router();
 
     });
 
-/**
- * Render the dashboard page.
- */
-// router.get("/dashboard", auth.loginRequired, (req, res) => {
-// 	// Here I have to use populate to get the 
-//   console.log(JSON.stringify(res.locals.pets));
-//   let userString = {
-//     firstName: req.user.firstName,
-//     lastName: req.user.lastName,
-//     email: req.user.email
-//   };
-//   users.find({email : req.user.email})
-//        .populate('pid')
-//        .exec((err, res) => {
-//           if(err)
-//             console.log(err)
-//           else
-//             console.log(JSON.stringify(res[0].pid))
-//        })
-// })
-//         if(err){
-//           let error = "Something bad happened! Please try agian.";
-//           return res.render("home", {
-//           	error : err
-//           });
-//         }
-//         console.log("The pets fetched from DB ", docs);
-//         //res.locals.pets = docs;
-//         res.render("home",{
-//         	pets : docs
-//         });
-//       })
 
-//  // res.render("dashboard", { userString: JSON.stringify(userString, null, 2) });
-// });
 
 router.get("/dashboard", auth.loginRequired, (req, res) => {
   console.log("get dashboard ");
@@ -126,7 +92,7 @@ router.get("/dashboard", auth.loginRequired, (req, res) => {
  // res.render("dashboard", { userString: JSON.stringify(userString, null, 2) });
 });
 
-router.post("/addPets", auth.loginRequired, (req, res) => {
+router.post("/dashboard", auth.loginRequired, (req, res) => {
 	console.log("The req in /addPets is ", req.body);
 	let arr = [];
   let selection;
